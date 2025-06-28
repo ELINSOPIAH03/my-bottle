@@ -19,7 +19,7 @@ export default function Navbar() {
 
     return (
         <header className="absolute inset-x-0 top-0 z-50">
-            <nav aria-label="Global" className="flex items-center justify-between p-6 sm:p-8 lg:px-20">
+            <nav aria-label="Global" className="flex items-center justify-between p-6 md:p-8 lg:px-20">
                 <div className="flex lg:flex-1">
                     <a href="#" className="-m-1.5 p-1.5">
                         <span className="sr-only">My Bottle</span>

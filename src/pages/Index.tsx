@@ -1,7 +1,9 @@
 import Navbar from "../components/Navbar"
 import HighlightText from '../components/HighlightText'
+import Footer from "../components/Footer"
 
 import sectionHeroImg from '../assets/img/section_index.png'
+import Banners from "../components/Banners"
 
 export default function Index() {
     
@@ -63,6 +65,8 @@ export default function Index() {
                     />
                 </div>
             </div>
+            <Banners />
+            <Footer />
         </div>
     )
 }
