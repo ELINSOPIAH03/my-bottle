@@ -1,0 +1,26 @@
+.highlight-text .word {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    padding: 0 6px;
+}
+
+.highlight-text .word::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #2c3e50;
+    /* pastel yellow */
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: highlightWord 0.5s forwards;
+    animation-delay: calc(var(--word-index) * 0.8s);
+    border-radius: 4px;
+}
+
+@keyframes highlightWord {
+    to {
+        transform: scaleX(1);
+    }
+}
