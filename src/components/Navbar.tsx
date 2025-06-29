@@ -8,24 +8,28 @@ import logoMobile from '../assets/img/logo.png'
 
 
 const navigation = [
-    { name: 'Home', href: '#' },
-    { name: 'Product', href: '#' },
+    { name: 'Home', href: '/' },
+    { name: 'Product', href: '/product' },
     { name: 'About Us', href: '#' },
     { name: 'Contact Us', href: '#' },
 ]
 
-export default function Navbar() {
+export default function Navbar({ 
+    bgClass = "bg-transparent",
+    logoSrc = logo,
+    itemClass = "text-baby-50"
+    }) {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
-        <header className="absolute inset-x-0 top-0 z-50">
+        <header className={`absolute inset-x-0 top-0 z-50 ${bgClass}`}>
             <nav aria-label="Global" className="flex items-center justify-between p-6 md:p-8 lg:px-20">
                 <div className="flex lg:flex-1">
                     <a href="#" className="-m-1.5 p-1.5">
                         <span className="sr-only">My Bottle</span>
                         <img
                             alt=""
-                            src={logo}
+                            src={logoSrc}
                             className="h-8 sm:h-10 lg:h-12 w-auto"
                         />
                     </a>
@@ -42,7 +46,7 @@ export default function Navbar() {
                 </div>
                 <div className="hidden lg:flex lg:gap-x-12">
                     {navigation.map((item) => (
-                        <a key={item.name} href={item.href} className="text-sm/6 font-semibold text-baby-50">
+                        <a key={item.name} href={item.href} className={`text-sm/6 font-semibold ${itemClass}`}>
                             {item.name}
                         </a>
                     ))}
